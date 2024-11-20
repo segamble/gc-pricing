@@ -3,7 +3,7 @@ languageCode = 'en-us'
 title = 'My New Hugo Site'
 theme = 'gruvhugo'
 [params]
-  custom_js = ["js/script1.js"]
+  custom_js = ["js/script2.js"]
 [params.style]
   # add path to custom CSS files here
   custom_css = ["css/style.css"]

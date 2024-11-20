@@ -1,7 +1,7 @@
-const items = document.querySelectorAll('.row');
+const items = document.querySelectorAll('.row.option');
 const header = document.querySelector('.table .header');
 const trashbin = document.querySelector('.trashbin .header');
-// const tips = document.querySelectorAll('.walkthru li');
+
 let names = document.querySelector('.row').children
 const cats = []
 for(i=1;i<names.length;++i){
@@ -40,12 +40,6 @@ function createDropZone(){
   return dropzone;
 }
 function createAllDropZones(){
-  items.forEach(item => {
-    let dropzone = createDropZone()
-    item.parentElement.after(dropzone)
-  })
-  let dropzone = createDropZone()
-  header.after(dropzone)
   let trashzone = createDropZone()
   trashbin.after(trashzone)
   const boxes = document.querySelectorAll('.drop-container');
@@ -98,47 +92,43 @@ function drop(e){
   e.target.classList.remove('drop-container')
   e.target.classList.add('container')
   removeDropZones()
-//   recalculate()
+  calculateCost()
+  applyDiscounts()
   createAllDropZones()
 }
 
 function dragEnd(e){
   e.target.classList.remove('chosen')
 }
-
-// // function getScores(item, rank){
-// //   cats.forEach(element => {
-// //     let x = "."+element;
-// //     score = itemScores.get(item.id).get(element)
-// //     score *= rank;
-// //     item.querySelector(x).innerHTML = score
-// //   })
-// // }
-
-// function totalScores(rows){
-//   cats.forEach(element => {
-//     let total = 0
-//     for(i=0; i<rows.length; ++i){
-//       // console.log(itemScores.get(rows[i].id).get(element))
-//       let score = itemScores.get(rows[i].id).get(element) * (i+1)
-//       total += score
-//     }
-//     // rows.forEach(row =>{
-//     //   let score = parseInt(row.querySelector("."+element).innerHTML) * parseInt(row.querySelector(".weight").innerHTML)
-//     //   total += score
-//     // })
-//     document.querySelector('.totals').querySelector("."+element).innerHTML = total
-//   })
-  
-// }
-
-// function resetTrashbin(){
-//   let rows = document.querySelectorAll('.trashbin .row')
-//   rows.forEach(row => {
-//     getScores(row,1)
-//   })
-// }
-
+function calculateCost(){
+  base = 10000
+  itemnum = document.querySelectorAll('.table .row.option').length
+  cost1 = Math.round(base + (itemnum * 1833.33))
+  document.querySelector('.totals.cost .first').innerText = "$"+cost1
+  cost2 = Math.round(base + (itemnum * 2500))
+  document.querySelector('.totals.cost .second').innerText = "$"+cost2
+  cost3 = Math.round(base + (itemnum * 4166.66))
+  document.querySelector('.totals.cost .third').innerText = "$"+cost3
+}
+calculateCost()
+ function applyDiscounts(){
+  first = parseInt(document.querySelector('.totals.cost .first').innerText.slice(1,))/100
+  firstdiscount1 = Math.round(first*.945)*100
+  firstdiscount2 = Math.round(first*.855)*100
+  document.querySelector('.totals.discount1 .first').innerText = "$"+firstdiscount1
+  document.querySelector('.totals.discount2 .first').innerText = "$"+firstdiscount2
+  second = parseInt(document.querySelector('.totals.cost .second').innerText.slice(1,))/100
+  seconddiscount1 = Math.round(second*.94)*100
+  seconddiscount2 = Math.round(second*.88)*100
+  document.querySelector('.totals.discount1 .second').innerText = "$"+seconddiscount1
+  document.querySelector('.totals.discount2 .second').innerText = "$"+seconddiscount2
+  third = parseInt(document.querySelector('.totals.cost .third').innerText.slice(1,))/100
+  thirddiscount1 = Math.round(third*.929)*100
+  thirddiscount2 = Math.round(third*.857)*100
+  document.querySelector('.totals.discount1 .third').innerText = "$"+thirddiscount1
+  document.querySelector('.totals.discount2 .third').innerText = "$"+thirddiscount2
+ }
+applyDiscounts()
 function recalculate(){
   let rows = document.querySelectorAll('.table .row');
   // for(i=0; i<rows.length; ++i){

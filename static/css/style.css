@@ -87,7 +87,15 @@ header .page-container > div {
   display: flex;
   flex-grow: 1;
 }
-
+.row{
+  border-bottom: 2px solid #36485B;
+}
+.row.option{
+  border-bottom-color: #c9c9c9;
+}
+.totals{
+  border-bottom: 2px solid #fff;
+}
 .header {
   flex-grow: 0;
 }
@@ -173,7 +181,7 @@ header .page-container > div {
   margin: 10px auto 0;
 }
 .trashbin .header {
-  background-color: #36485B;
+  background-color: #bd692c;
   color: #fff;
   padding: 2%;
   pointer-events: none;
