@@ -1,0 +1,231 @@
+{{define "main"}}
+<div class="intro" style="align-items: center">
+  {{if .Site.Params.main.enabled }}
+  <img class="image" src='{{ .Site.Params.main.img | absURL }}' 
+	title="{{	.Site.Params.main.img_title }}" width="200px" 
+	alt="Author's picture or avatar or logo"/>
+  <ul>
+    <li class="intro-quote">{{ .Site.Params.main.quote }}</li>
+  </ul>
+  {{end}}
+  <p>{{ .Content | safeHTML }}</p>
+</div>
+<div class="wrapper">
+  <div class="table">
+    <div class="header">
+      <div class="feature">
+      </div>
+      <div class="first">
+        Good
+      </div>
+      <div class="second">
+        Better
+      </div>
+      <div class="third">
+        Best
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+         <div class="feature">
+          New Content
+White Papers/eBooks = 1 
+Exec Summaries/Solution Sheets/Case Studies = .5
+Interactive Campaigns = 1
+        </div>
+        <div class="first">
+          {{ .Params.new_content.first }}
+        </div>
+        <div class="second">
+          {{ .Params.new_content.second }}
+        </div>
+        <div class="third">
+          {{ .Params.new_content.third }}
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+         <div class="feature">
+          Top of Funnel Campaigns
+        </div>
+        <div class="first">
+          {{ .Params.tofu.first }}
+        </div>
+        <div class="second">
+          {{ .Params.tofu.second }}
+        </div>
+        <div class="third">
+          {{ .Params.tofu.third }}
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+         <div class="feature">
+          Lead Nurture
+        </div>
+        <div class="first">
+          Email, Banner, Linkedin
+        </div>
+        <div class="second">
+          Email, Banner, Linkedin
+        </div>
+        <div class="third">
+          Email, Banner, Linkedin
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+         <div class="feature">
+          Re-Engagement & Marketing Ops
+        </div>
+        <div class="first">
+          YES
+        </div>
+        <div class="second">
+          YES
+        </div>
+        <div class="third">
+          YES
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+         <div class="feature">
+          SEO-Optimized Blog Posts
+        </div>
+        <div class="first">
+          {{ .Params.blogs.first }}
+        </div>
+        <div class="second">
+          {{ .Params.blogs.second }}
+        </div>
+        <div class="third">
+          {{ .Params.blogs.third }}
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+         <div class="feature">
+          Newsletter
+        </div>
+        <div class="first">
+          24
+        </div>
+        <div class="second">
+          24
+        </div>
+        <div class="third">
+          24
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+         <div class="feature">
+          CRM/Marketing Automation Integration
+        </div>
+        <div class="first">
+          YES
+        </div>
+        <div class="second">
+          YES
+        </div>
+        <div class="third">
+          YES
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+         <div class="feature">
+          Media Buy & Strategic Planning
+        </div>
+        <div class="first">
+          YES
+        </div>
+        <div class="second">
+          YES
+        </div>
+        <div class="third">
+          YES
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+         <div class="feature">
+          Meetings
+        </div>
+        <div class="first">
+          Weekly
+        </div>
+        <div class="second">
+          Weekly
+        </div>
+        <div class="third">
+          Weekly
+        </div>
+      </div>
+    </div>
+
+    <div class="totals">
+      <div class="feature">
+        SERVICE COST PER MONTH
+      </div>
+      <div class="first">
+        ${{ .Params.cost.first }}
+      </div>
+      <div class="second">
+        ${{ .Params.cost.second }}
+      </div>
+      <div class="third">
+        ${{ .Params.cost.third }}
+      </div>
+    </div>
+
+    <div class="totals">
+      <div class="feature">
+        SERVICE COST PER MONTH<br>(6 MO commitment)
+      </div>
+      <div class="first">
+        
+      </div>
+      <div class="second">
+        
+      </div>
+      <div class="third">
+        
+      </div>
+    </div>
+
+    <div class="totals">
+      <div class="feature">
+        SERVICE COST PER MONTH<br>(12 MO commitment)
+      </div>
+      <div class="first">
+        
+      </div>
+      <div class="second">
+        
+      </div>
+      <div class="third">
+        
+      </div>
+    </div>
+
+    </div>
+    </div>
+{{ partial "menu.html" . }}
+{{end}}
