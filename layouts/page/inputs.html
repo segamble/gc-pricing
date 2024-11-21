@@ -226,7 +226,14 @@ Interactive Campaigns = 1
     </div>
 
     </div>
-
+<div class="hide">
+  <span id="base">{{ .Params.base }}</span>
+  <span id="content">{{ .Params.content }}</span>
+  <span id="campaigns">{{ .Params.campaigns }}</span>
+  <span id="option1">{{ .Params.option1 }}</span>
+  <span id="option2">{{ .Params.option2 }}</span>
+  <span id="option3">{{ .Params.option3 }}</span>
+</div>
 {{ partial "menu.html" . }}
 {{ $custom_js := "js/inputs.js"}}
 

@@ -1,5 +1,9 @@
-
-
+const base = parseInt(document.getElementById('base').innerHTML)
+const content = parseInt(document.getElementById('content').innerHTML)
+const campaigns = parseInt(document.getElementById('campaigns').innerHTML)
+const option1 = parseInt(document.getElementById('option1').innerHTML)
+const option2 = parseInt(document.getElementById('option2').innerHTML)
+const option3 = parseInt(document.getElementById('option3').innerHTML)
 const items = document.querySelectorAll('.row.input');
 const header = document.querySelector('.table .header');
 items.forEach(item => {
@@ -17,14 +21,14 @@ inputs.forEach((item) => {
 
 
 function calculateCost(str,int){
-    base = 10000
   amt = base
   for(i=0; i<7; ++i){
+    console.log(amt)
     if(items[i].querySelector('.'+str).children[0]){
-        if(i == 0){
-            amt += items[i].querySelector('.'+str).children[0].value * 229
-        } else if(i == 1){
-            amt += items[i].querySelector('.'+str).children[0].value * 460
+        if(i == 1){
+            amt += items[i].querySelector('.'+str).children[0].value * campaigns
+        } else {
+            amt += items[i].querySelector('.'+str).children[0].value * content
         }  
     } else {
         amt += int
@@ -55,9 +59,9 @@ calculateAll()
 
 
 function calculateAll(){
-    calculateCost('first', 1834)
-    calculateCost('second', 2500)
-    calculateCost('third', 4166)
+    calculateCost('first', option1)
+    calculateCost('second', option2)
+    calculateCost('third', option3)
     applyDiscounts()    
 }
 
