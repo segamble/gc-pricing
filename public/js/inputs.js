@@ -1,6 +1,13 @@
 const base = parseInt(document.getElementById('base').innerHTML)
-const content = parseInt(document.getElementById('content').innerHTML)
-const campaigns = parseInt(document.getElementById('campaigns').innerHTML)
+const content1 = parseInt(document.getElementById('content1').innerHTML)
+const content2 = parseInt(document.getElementById('content2').innerHTML)
+const content3 = parseInt(document.getElementById('content3').innerHTML)
+const campaigns1 = parseInt(document.getElementById('campaigns1').innerHTML)
+const campaigns2 = parseInt(document.getElementById('campaigns2').innerHTML)
+const campaigns3 = parseInt(document.getElementById('campaigns3').innerHTML)
+const blogs1 = parseInt(document.getElementById('blogs1').innerHTML)
+const blogs2 = parseInt(document.getElementById('blogs2').innerHTML)
+const blogs3 = parseInt(document.getElementById('blogs3').innerHTML)
 const option1 = parseInt(document.getElementById('option1').innerHTML)
 const option2 = parseInt(document.getElementById('option2').innerHTML)
 const option3 = parseInt(document.getElementById('option3').innerHTML)
@@ -10,7 +17,7 @@ items.forEach(item => {
     item.id = item.firstElementChild.innerHTML.trim().replaceAll(' ', '-').toLowerCase().slice(0,8)
 }  )
 
-const inputs = document.querySelectorAll('.table input')
+const inputs = document.querySelectorAll('.wrapper input')
 
 
 inputs.forEach((item) => {

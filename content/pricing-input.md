@@ -3,11 +3,23 @@ date: 2024-11-19T14:00:00-00:00
 draft: false
 params:
     base: 10000
-    content: 100
-    campaigns: 520
+    content: 
+        first: 300
+        second: 200
+        third: 100
+    campaigns: 
+        first: 500
+        second: 300
+        third: 200
+    blogs: 
+        first: 300
+        second: 200
+        third: 100
     option1: 1834
     option2: 2500
     option3: 4166
+    moSix: 0.95
+    moTwelve: 0.85
     new_content: 
         first: 8
         second: 12
@@ -20,10 +32,7 @@ params:
         first: 8
         second: 12
         third: 16
-    cost:
-        first: 21000
-        second: 25000
-        third: 35000
+    
     
 title: Pricing option 2
 layout: 'inputs'

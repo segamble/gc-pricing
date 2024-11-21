@@ -41,7 +41,17 @@ body {
     min-height: 800px;
   }
 }
-
+.contract-term{
+  text-align: center;
+  margin-bottom: 40px;
+}
+.contract-term>div{
+  max-width: 160px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .page-container {
   max-width: 1022px;
   margin: 40px auto 0;
@@ -138,6 +148,14 @@ input{
 .row.input .second,
 .row.input .third{
   pointer-events:auto;
+}
+.row input[type="radio"]{
+  width: 20px;
+}
+.third:has(input[type="radio"]),
+.second:has(input[type="radio"]),
+.first:has(input[type="radio"]){
+  flex-direction: column;
 }
 @media (max-width: 769px) {
   .first,.second,.third {
@@ -360,5 +378,3 @@ dotlottie-player {
 .hide {
   display: none !important;
 }
-
-/*# sourceMappingURL=style.css.map */
