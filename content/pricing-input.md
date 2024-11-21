@@ -29,6 +29,6 @@ title: Pricing option 2
 layout: 'inputs'
 ---
 
-## Pricing for Our New Favorite Client
+## Pricing for Our New Favorite Client Rich is editing
 
 **You** are going to *love* working with gC!
