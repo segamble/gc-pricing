@@ -9,8 +9,6 @@
 	  {{- block "main" . }}{{- end }}
           {{- partial "footer.html" . -}}
       </div>
-      {{ range .Site.Params.custom_js -}}
-    <script type="text/javascript" src="{{ . | absURL }}"></script>
-    {{- end }}
+
     </body>
 </html>

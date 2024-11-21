@@ -76,7 +76,6 @@ header .page-container > div {
   flex-grow: 0;
   display: flex;
   flex-direction: column;
-  /* max-height: 63px; */
 }
 
 .container:has(div.row) {
@@ -89,6 +88,14 @@ header .page-container > div {
 }
 .row{
   border-bottom: 2px solid #36485B;
+}
+input{
+  width: 60px;
+  text-align: center;
+  color: #36485B;
+  font-weight: bold;
+  font-size: 1rem;
+  border: 1px solid #36485B;
 }
 .row.option{
   border-bottom-color: #c9c9c9;
@@ -127,6 +134,11 @@ header .page-container > div {
   background-color: #36485B;
   color: #fff;
 }
+.row.input .first, 
+.row.input .second,
+.row.input .third{
+  pointer-events:auto;
+}
 @media (max-width: 769px) {
   .first,.second,.third {
     writing-mode: vertical-lr;
@@ -162,19 +174,6 @@ header .page-container > div {
     writing-mode: unset;
   }
 }
-.row .good {
-  background-color: #f1be5f;
-}
-.row .meh {
-  background-color: #d9915d;
-}
-.row .better {
-  background-color: #99c8cc;
-}
-.row .best {
-  background-color: #61b4ab;
-}
-
 .trashbin {
   width: 1022px;
   max-width: 100%;

@@ -14,6 +14,7 @@
   <div class="table">
     <div class="header">
       <div class="feature">
+
       </div>
       <div class="first">
         Good
@@ -26,43 +27,44 @@
       </div>
     </div>
     <div class="container">
-      <div class="row option">
+
+      <div class="row input">
          <div class="feature">
-          New Content
+          New Content<br>
 White Papers/eBooks = 1 
 Exec Summaries/Solution Sheets/Case Studies = .5
 Interactive Campaigns = 1
         </div>
         <div class="first">
-          {{ .Params.new_content.first }}
+          <input type="number" value="{{ .Params.new_content.first }}" min="0" max="16"/>
         </div>
         <div class="second">
-          {{ .Params.new_content.second }}
+          <input type="number" value="{{ .Params.new_content.second }}" min="0" max="16"/>
         </div>
         <div class="third">
-          {{ .Params.new_content.third }}
+          <input type="number" value="{{ .Params.new_content.third }}" min="0" max="16"/>
         </div>
       </div>
     </div>
     <div class="container">
-      <div class="row option">
+      <div class="row input">
          <div class="feature">
           Top of Funnel Campaigns
         </div>
         <div class="first">
-          {{ .Params.tofu.first }}
+          <input type="number" value="{{ .Params.tofu.first }}" min="0" max="16"/>
         </div>
         <div class="second">
-          {{ .Params.tofu.second }}
+          <input type="number" value="{{ .Params.tofu.second }}" min="0" max="16"/>
         </div>
         <div class="third">
-          {{ .Params.tofu.third }}
+          <input type="number" value="{{ .Params.tofu.third }}" min="0" max="16"/>
         </div>
       </div>
     </div>
 
     <div class="container">
-      <div class="row option">
+      <div class="row input">
          <div class="feature">
           Lead Nurture
         </div>
@@ -79,7 +81,7 @@ Interactive Campaigns = 1
     </div>
 
     <div class="container">
-      <div class="row option">
+      <div class="row input">
          <div class="feature">
           Re-Engagement & Marketing Ops
         </div>
@@ -96,24 +98,24 @@ Interactive Campaigns = 1
     </div>
 
     <div class="container">
-      <div class="row option">
+      <div class="row input">
          <div class="feature">
           SEO-Optimized Blog Posts
         </div>
         <div class="first">
-          {{ .Params.blogs.first }}
+          <input type="number" value="{{ .Params.blogs.first }}" min="0" max="16"/>
         </div>
         <div class="second">
-          {{ .Params.blogs.second }}
+          <input type="number" value="{{ .Params.blogs.second }}" min="0" max="16"/>
         </div>
         <div class="third">
-          {{ .Params.blogs.third }}
+          <input type="number" value="{{ .Params.blogs.third }}" min="0" max="16"/>
         </div>
       </div>
     </div>
 
     <div class="container">
-      <div class="row option">
+      <div class="row input">
          <div class="feature">
           Newsletter
         </div>
@@ -130,7 +132,7 @@ Interactive Campaigns = 1
     </div>
 
     <div class="container">
-      <div class="row">
+      <div class="row input">
          <div class="feature">
           CRM/Marketing Automation Integration
         </div>
@@ -147,7 +149,7 @@ Interactive Campaigns = 1
     </div>
 
     <div class="container">
-      <div class="row">
+      <div class="row input">
          <div class="feature">
           Media Buy & Strategic Planning
         </div>
@@ -164,7 +166,7 @@ Interactive Campaigns = 1
     </div>
 
     <div class="container">
-      <div class="row">
+      <div class="row input">
          <div class="feature">
           Meetings
         </div>
@@ -215,27 +217,18 @@ Interactive Campaigns = 1
         SERVICE COST PER MONTH<br>(12 MO commitment)
       </div>
       <div class="first">
-        
       </div>
       <div class="second">
-        
       </div>
       <div class="third">
-        
       </div>
+    </div>
     </div>
 
     </div>
-    <div class="trashbin">
-      <div class="header">
-        <div class="title">
-          Stuff I don't care about
-        </div>
-    </div>
-    </div>
-    </div>
+
 {{ partial "menu.html" . }}
-{{ $custom_js := "js/script2.js"}}
+{{ $custom_js := "js/inputs.js"}}
 
     <script type="text/javascript" src="{{ $custom_js | absURL }}"></script>
 
