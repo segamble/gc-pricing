@@ -2,15 +2,15 @@
 date: 2024-11-19T14:00:00-00:00
 draft: false
 params:
-    base: 7500
+    base: 5000
     content: 
-        first: 1000
-        second: 800
-        third: 700
+        first: 10000
+        second: 8000
+        third: 7000
     campaigns: 
-        first: 750
-        second: 300
-        third: 200
+        first: 50000
+        second: 40000
+        third: 20000
     blogs: 
         first: 500
         second: 250
