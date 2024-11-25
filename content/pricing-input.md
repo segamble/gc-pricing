@@ -12,14 +12,14 @@ params:
         second: 300
         third: 200
     blogs: 
-        first: 300
-        second: 200
-        third: 100
+        first: 500
+        second: 250
+        third: 250
     option1: 1834
     option2: 2500
     option3: 4166
-    moSix: 0.95
-    moTwelve: 0.85
+    moSix: 0.90 
+    moTwelve: 0.80
     new_content: 
         first: 2
         second: 4
