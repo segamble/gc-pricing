@@ -2,7 +2,7 @@
 date: 2024-11-19T14:00:00-00:00
 draft: false
 params:
-    base: 7500
+    base: 000
     content: 
         first: 1000
         second: 800
