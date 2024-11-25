@@ -21,9 +21,9 @@ params:
     moSix: 0.95
     moTwelve: 0.85
     new_content: 
-        first: 8
-        second: 12
-        third: 16
+        first: 2
+        second: 4
+        third: 8
     tofu:
         first: 4
         second: 4
