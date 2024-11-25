@@ -4,11 +4,11 @@ draft: false
 params:
     base: 10000
     content: 
-        first: 300
-        second: 200
-        third: 100
+        first: 1000
+        second: 800
+        third: 700
     campaigns: 
-        first: 500
+        first: 750
         second: 300
         third: 200
     blogs: 
