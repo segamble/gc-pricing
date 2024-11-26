@@ -44,7 +44,6 @@ body {
 .contract-term{
   text-align: center;
   margin: 40px 0;
-  background-color: #dff7f8;
   padding: 2%;
 }
 .contract-term>div{
@@ -158,7 +157,6 @@ input{
   justify-content: center;
   align-items: center;
   text-align: center;
-  pointer-events: none;
   background-color: #36485B;
   color: #fff;
 }

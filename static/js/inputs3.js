@@ -60,8 +60,9 @@ function calculateCost(){
   }
   amt *= term
   amt *=pm
-    amt= Math.round(amt)
-  document.querySelector('.totals.cost .'+str).innerText = "$"+amt
+    amt= Math.round(amt).toLocaleString()
+    moAmt = amt/3
+  document.querySelector('.totals.cost .'+str).innerText = "$"+amt +"<br>($"+ moAmt +"per month)"
 }
 calculateAll()
 
