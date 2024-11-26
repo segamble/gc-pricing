@@ -34,4 +34,4 @@ layout: 'inputs2'
 
 ## Pricing for Our New Favorite Client
 
-**You** are going to *love* working with gC!
+All deliverables are *per quarter*.
