@@ -6,7 +6,7 @@ params:
         one: .8
         two: 1
         three: 1.25
-    base: 15000
+    base: 10000
     content: 
         first: 10000
         second: 9000
