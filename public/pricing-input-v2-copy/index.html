@@ -3,9 +3,9 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     
-    <title>Pricing | My New Hugo Site</title>
-    <meta name="description" content="Pricing">
-    <meta property="og:site_name" content="Pricing" />
+    <title>Pricing option 2 | My New Hugo Site</title>
+    <meta name="description" content="Pricing option 2">
+    <meta property="og:site_name" content="Pricing option 2" />
     <meta property="og:title" content="My New Hugo Site" />
     <meta property="og:description" content="Pricing for Our New Favorite Client You are going to love working with gC!
 " />
@@ -22,7 +22,7 @@
     
     <link rel="stylesheet" href="http://localhost:1313/sass/main.min.a669fc379ca0ba4d389af69be2682407e7bca16d368f2e7ad5b83c0cd80029b3.css" type="text/css" media="screen">
 
-    <link rel="stylesheet" href="http://localhost:1313/css/style1.css">
+    <link rel="stylesheet" href="http://localhost:1313/css/style.css">
     
     
 
@@ -89,109 +89,123 @@
 </p>
 </div>
 <div class="wrapper">
+  <hr>
+  <div class="contract-term">Length of signed contract: 
+  <div><input type="radio" id="three" name="term" value="1"/><label for="three">3 months</label></div>
+  <div><input type="radio" id="six" name="term" value="0.95"/><label for="three">6 months</label></div>
+  <div><input type="radio" id="twelve" name="term" value="0.85"/><label for="three">12 months</label></div>
+</div>
   <div class="table">
     <div class="header">
       <div class="feature">
+
       </div>
       <div class="first">
-        Good
+       1 Persona
       </div>
       <div class="second">
-        Better
+        2 Personas
       </div>
       <div class="third">
-        Best
+        3 Personas
       </div>
     </div>
     <div class="container">
-      <div class="row option">
+
+      <div class="row input">
          <div class="feature">
-          New Content
+          New Content<br>
 White Papers/eBooks = 1 
 Exec Summaries/Solution Sheets/Case Studies = .5
 Interactive Campaigns = 1
         </div>
         <div class="first">
-          8
+          <input type="number" value="8" min="0" max="16"/>
         </div>
         <div class="second">
-          12
+          <input type="number" value="12" min="0" max="16"/>
         </div>
         <div class="third">
-          16
+          <input type="number" value="16" min="0" max="16"/>
         </div>
       </div>
     </div>
     <div class="container">
-      <div class="row option">
+      <div class="row input">
          <div class="feature">
           Top of Funnel Campaigns
         </div>
         <div class="first">
-          4
+          <input type="number" value="4" min="0" max="16"/>
         </div>
         <div class="second">
-          4
+          <input type="number" value="4" min="0" max="16"/>
         </div>
         <div class="third">
-          6
+          <input type="number" value="6" min="0" max="16"/>
         </div>
       </div>
     </div>
 
     <div class="container">
-      <div class="row option">
+      <div class="row input">
          <div class="feature">
           Lead Nurture
         </div>
         <div class="first">
-          Email, Banner, Linkedin
+          <div><input type="radio" id="yn1" name="nurture1" value="1"/><label for="yn1">Yes</label></div>
+          <div><input type="radio" id="nn1" name="nurture1" value="0"/><label for="nn1">No</label></div>
         </div>
         <div class="second">
-          Email, Banner, Linkedin
+          <div><input type="radio" id="yn2" name="nurture2" value="1"/><label for="yn2">Yes</label></div>
+          <div><input type="radio" id="nn2" name="nurture2" value="0"/><label for="nn2">No</label></div>
         </div>
         <div class="third">
-          Email, Banner, Linkedin
+          <div><input type="radio" id="yn3" name="nurture3" value="1"/><label for="yn3">Yes</label></div>
+          <div><input type="radio" id="nn3" name="nurture3" value="0"/><label for="nn3">No</label></div>
         </div>
       </div>
     </div>
 
     <div class="container">
-      <div class="row option">
+      <div class="row input">
          <div class="feature">
           Re-Engagement & Marketing Ops
         </div>
         <div class="first">
-          YES
+          <div><input type="radio" id="yo1" name="ops1" value="1"/><label for="yo1">Yes</label></div>
+          <div><input type="radio" id="no1" name="ops1" value="0"/><label for="no1">No</label></div>
         </div>
         <div class="second">
-          YES
+          <div><input type="radio" id="yo2" name="ops2" value="1"/><label for="yo2">Yes</label></div>
+          <div><input type="radio" id="no2" name="ops2" value="0"/><label for="no2">No</label></div>
         </div>
         <div class="third">
-          YES
+          <div><input type="radio" id="yo3" name="ops3" value="1"/><label for="yo3">Yes</label></div>
+          <div><input type="radio" id="no3" name="ops3" value="0"/><label for="no3">No</label></div>
         </div>
       </div>
     </div>
 
     <div class="container">
-      <div class="row option">
+      <div class="row input">
          <div class="feature">
           SEO-Optimized Blog Posts
         </div>
         <div class="first">
-          8
+          <input type="number" value="8" min="0" max="16"/>
         </div>
         <div class="second">
-          12
+          <input type="number" value="12" min="0" max="16"/>
         </div>
         <div class="third">
-          16
+          <input type="number" value="16" min="0" max="16"/>
         </div>
       </div>
     </div>
 
     <div class="container">
-      <div class="row option">
+      <div class="row input">
          <div class="feature">
           Newsletter
         </div>
@@ -208,7 +222,7 @@ Interactive Campaigns = 1
     </div>
 
     <div class="container">
-      <div class="row">
+      <div class="row input">
          <div class="feature">
           CRM/Marketing Automation Integration
         </div>
@@ -225,7 +239,7 @@ Interactive Campaigns = 1
     </div>
 
     <div class="container">
-      <div class="row">
+      <div class="row input">
          <div class="feature">
           Media Buy & Strategic Planning
         </div>
@@ -242,7 +256,7 @@ Interactive Campaigns = 1
     </div>
 
     <div class="container">
-      <div class="row">
+      <div class="row input">
          <div class="feature">
           Meetings
         </div>
@@ -260,64 +274,42 @@ Interactive Campaigns = 1
 
     <div class="totals cost">
       <div class="feature">
-        SERVICE COST PER MONTH<br>(3 MO commitment)
+        SERVICE COST PER MONTH
       </div>
       <div class="first">
-        $21000
+        $
       </div>
       <div class="second">
-        $25000
+        $
       </div>
       <div class="third">
-        $35000
+        $
       </div>
     </div>
-
-    <div class="totals discount1">
-      <div class="feature">
-        SERVICE COST PER MONTH<br>(6 MO commitment)
-      </div>
-      <div class="first">
-        
-      </div>
-      <div class="second">
-        
-      </div>
-      <div class="third">
-        
-      </div>
-    </div>
-
-    <div class="totals discount2">
-      <div class="feature">
-        SERVICE COST PER MONTH<br>(12 MO commitment)
-      </div>
-      <div class="first">
-        
-      </div>
-      <div class="second">
-        
-      </div>
-      <div class="third">
-        
-      </div>
     </div>
 
     </div>
-    <div class="trashbin">
-      <div class="header">
-        <div class="title">
-          Stuff I don't care about
-        </div>
-    </div>
-    </div>
-    </div>
+<div class="hide">
+  <span id="base">10000</span>
+  <span id="content1">300</span>
+  <span id="content2">200</span>
+  <span id="content3">100</span>
+  <span id="campaigns1">500</span>
+  <span id="campaigns2">300</span>
+  <span id="campaigns3">200</span>
+  <span id="blogs1">8</span>
+  <span id="blogs2">12</span>
+  <span id="blogs3">16</span>
+  <span id="option1">1834</span>
+  <span id="option2">2500</span>
+  <span id="option3">4166</span>
+</div>
 <div class="nav">
 </div>
 
 
 
-    <script type="text/javascript" src="http://localhost:1313/js/script2.js"></script>
+    <script type="text/javascript" src="http://localhost:1313/js/inputs1.js"></script>
 
 <footer id="footer">
     <strong></strong>

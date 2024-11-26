@@ -1,0 +1,189 @@
+{{define "main"}}
+<div class="intro" style="align-items: center">
+  {{if .Site.Params.main.enabled }}
+  <img class="image" src='{{ .Site.Params.main.img | absURL }}' 
+	title="{{	.Site.Params.main.img_title }}" width="200px" 
+	alt="Author's picture or avatar or logo"/>
+  <ul>
+    <li class="intro-quote">{{ .Site.Params.main.quote }}</li>
+  </ul>
+  {{end}}
+  <p>{{ .Content | safeHTML }}</p>
+</div>
+<div class="wrapper">
+  
+  <div class="table two-col">
+    <div class="header">
+      <div class="feature">
+        Personas
+      </div>
+      <div class="first">
+        <input type="number" id="personas" value="2" min="1" max="3"/>
+      </div>
+    </div>
+    <div class="container">
+
+      <div class="row input">
+         <div class="feature">
+          New Content
+          <div class="tooltip">White Papers/eBooks = 1 <br>
+            Exec Summaries/Solution Sheets/Case Studies = .5<br>
+            Interactive Campaigns = 1</div>
+        </div>
+        <div class="first">
+          <input type="number" value="{{ .Params.new_content }}" min="0" max="16"/>
+        </div>
+        
+      </div>
+    </div>
+    <div class="container">
+      <div class="row input">
+         <div class="feature">
+          Top of Funnel Campaigns
+          <div class="tooltip">Full cycle development from CTA to Assets</div>
+        </div>
+        <div class="first">
+          <input type="number" value="{{ .Params.tofu }}" min="0" max="16"/>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row input">
+         <div class="feature">
+          Omnichannel Lead Nurture
+          <div class="tooltip">Email <br>
+            Banner<br>
+            LinkedIn</div>
+        </div>
+        <div class="first">
+          <div><input type="radio" id="yn1" name="ln" value="1" checked="checked"/><label for="yn1">Yes</label></div>
+          <div><input type="radio" id="nn1" name="ln" value="0"/><label for="nn1">No</label></div>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row input">
+         <div class="feature">
+          Re-Engagement & Marketing Ops
+          <div class="tooltip">Optimizing outreach to your existing database.</div>
+        </div>
+        
+        <div class="first">
+          <div><input type="radio" id="yo1" name="mops" value="1" checked="checked"/><label for="yo1">Yes</label></div>
+          <div><input type="radio" id="no1" name="mops" value="0"/><label for="no1">No</label></div>
+        </div>
+       
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row input">
+         <div class="feature">
+          SEO-Optimized Blog Posts
+          <div class="tooltip">Making sure that organic search leads your prospects to your site.</div>
+        </div>
+        <div class="first">
+          <input type="number" value="{{ .Params.blogNo }}" min="0" max="16"/>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row input">
+         <div class="feature">
+          Newsletters 
+          <div class="tooltip">A monthly newsletter for each persona</div>
+        </div>
+        <div class="first">
+          6
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row input">
+         <div class="feature">
+          CRM/Marketing Automation Integration
+          <div class="tooltip">Working with your tech stack</div>
+        </div>
+        <div class="first">
+          YES
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row input">
+         <div class="feature">
+          Media Buy & Strategic Planning
+          <div class="tooltip">Media management and continual review of platforms and techniques</div>
+        </div>
+        <div class="first">
+          YES
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row input">
+         <div class="feature">
+          Meetings
+          <div class="tooltip">Coordination and communication with the A team</div>
+        </div>
+        <div class="first">
+          Weekly
+        </div>
+       
+      </div>
+    </div>
+
+    <div class="totals cost">
+      <div class="feature">
+        SERVICE COST PER QUARTER
+      </div>
+      <div class="first">
+        ${{ .Params.cost.first }}
+      </div>
+      
+    </div>
+    </div>
+    <div class="contract-term">Length of signed contract: 
+      <div>
+      <div><input type="radio" id="three" name="term" value="1"/><label for="three">Month to month</label></div>
+      <div><input type="radio" id="six" name="term" value="{{ .Params.moSix }}" checked="checked"/><label for="three">6 months</label></div>
+      <div><input type="radio" id="twelve" name="term" value="{{ .Params.moTwelve }}"/><label for="three">12 months</label></div>
+    </div>
+    </div>
+    </div>
+<div class="hide">
+  <span id="p1">{{ .Params.personas.one }}</span>
+  <span id="p2">{{ .Params.personas.two }}</span>
+  <span id="p3">{{ .Params.personas.three }}</span>
+  <span id="base">{{ .Params.base }}</span>
+  <span id="content1">{{ .Params.content.first }}</span>
+  <span id="content2">{{ .Params.content.second }}</span>
+  <span id="content3">{{ .Params.content.third }}</span>
+  <span id="campaigns1">{{ .Params.campaigns.first }}</span>
+  <span id="campaigns2">{{ .Params.campaigns.second }}</span>
+  <span id="campaigns3">{{ .Params.campaigns.third }}</span>
+  <span id="blogs1">{{ .Params.blogs.first }}</span>
+  <span id="blogs2">{{ .Params.blogs.second }}</span>
+  <span id="blogs3">{{ .Params.blogs.third }}</span>
+  <span id="ln">{{ .Params.leadNurture }}</span>
+  <span id="mops">{{ .Params.marketingOps }}</span>
+  <span id="news">{{ .Params.newsletters }}</span>
+</div>
+{{ partial "menu.html" . }}
+{{ $custom_js := "js/inputs3.js"}}
+
+    <script type="text/javascript" src="{{ $custom_js | absURL }}"></script>
+
+{{end}}

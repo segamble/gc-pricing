@@ -43,13 +43,14 @@ body {
 }
 .contract-term{
   text-align: center;
-  margin-bottom: 40px;
+  margin: 40px 0;
+  background-color: #dff7f8;
+  padding: 2%;
 }
 .contract-term>div{
-  max-width: 160px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 .page-container {
@@ -122,17 +123,34 @@ input{
   background-color: #36485B;
   color: #fff;
   padding: 0 2%;
-  pointer-events: none;
+  position:relative;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+}
+.feature .tooltip{
+  display:none;
+}
+.feature:hover .tooltip{
+  background-color: #36485b;
+  color: #fff;
+  display: block;
+  position: absolute;
+  font-size: .8rem;
+  z-index: 2000;
+  right: 100%;
+  width: 100%;
+  padding: 2%;
 }
 @media (max-width: 299px) {
   .feature {
     font-size: 0.85rem;
   }
 }
-
+.two-col .feature,
+.two-col .first{
+  width: 50%;
+}
 .first,.second,.third {
   width: 20%;
   padding: 2%;

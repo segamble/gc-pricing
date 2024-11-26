@@ -123,10 +123,24 @@ input{
   background-color: #36485B;
   color: #fff;
   padding: 0 2%;
-  pointer-events: none;
+  position:relative;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+}
+.feature .tooltip{
+  display:none;
+}
+.feature:hover .tooltip{
+  background-color: #36485b;
+  color: #fff;
+  display: block;
+  position: absolute;
+  font-size: .8rem;
+  z-index: 2000;
+  right: 100%;
+  width: 100%;
+  padding: 2%;
 }
 @media (max-width: 299px) {
   .feature {
