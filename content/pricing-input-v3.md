@@ -24,9 +24,9 @@ params:
     newsletters: 1000
     moSix: 0.95
     moTwelve: 0.85
-    new_content: 8
-    tofu: 4
-    blogNo: 8
+    new_content: 1
+    tofu: 2
+    blogNo: 3
     
 title: Pricing option 3
 layout: 'inputs2'
