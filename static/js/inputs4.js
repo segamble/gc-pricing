@@ -30,10 +30,13 @@ function calcAddCost(i, str, x){
     }
     return addCost
 }
-
+function calculateNewsletters(personas){
+    document.getElementById('newslett').children[1].innerHTML = personas*3
+}
 function calculateCost(){
   term = document.querySelector('input[name=term]:checked').value
   personas = document.getElementById('personas').value
+  console.log(personas)
   pmid = 'p'+personas
   pm = document.getElementById(pmid).innerHTML
   console.log(pm)
@@ -68,5 +71,6 @@ calculateAll()
 
 function calculateAll(){
     calculateCost()
+    calculateNewsletters(personas)
 }
 

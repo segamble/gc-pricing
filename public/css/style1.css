@@ -25,6 +25,7 @@ body {
   font-family: "Gilmer Medium", Arial, sans-serif;
   margin: 0;
   background: #E8FEFF;
+  color: #36485B;
 }
 .main{
   width: 80%;
@@ -49,8 +50,13 @@ body {
 .contract-term>div{
   margin: 0 auto;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
+  max-width: 300px;
+  border-top: 1px solid #36485B;
+  padding-top: 8px;
+  margin-top: 8px;
 }
 .page-container {
   max-width: 1022px;
@@ -73,7 +79,7 @@ header .page-container > div {
   min-width: 173px;
 }
 
-.table, .trashbin {
+.table{
   flex-grow: 1;
   max-width: 100%;
   margin: 0 auto;
@@ -107,18 +113,12 @@ input{
   font-size: 1rem;
   border: 1px solid #36485B;
 }
-.row.option{
-  border-bottom-color: #c9c9c9;
-}
-.totals{
-  border-bottom: 2px solid #fff;
-}
+
 .header {
   flex-grow: 0;
 }
 
 .feature {
-  width: 40%;
   background-color: #36485B;
   color: #fff;
   padding: 0 2%;
@@ -128,18 +128,19 @@ input{
   align-items: center;
 }
 .feature .tooltip{
-  display:none;
-}
-.feature:hover .tooltip{
   background-color: #36485b;
   color: #fff;
-  display: block;
+  display: none;
   position: absolute;
   font-size: .8rem;
   z-index: 2000;
   right: 100%;
   width: 100%;
   padding: 2%;
+}
+
+.feature:hover .tooltip{
+  display: block;
 }
 @media (max-width: 299px) {
   .feature {
@@ -150,8 +151,7 @@ input{
 .two-col .first{
   width: 50%;
 }
-.first,.second,.third {
-  width: 20%;
+.first{
   padding: 2%;
   display: flex;
   justify-content: center;
@@ -160,18 +160,27 @@ input{
   background-color: #36485B;
   color: #fff;
 }
-.row.input .first, 
-.row.input .second,
-.row.input .third{
+.row.input .first{
   pointer-events:auto;
 }
 .row input[type="radio"]{
   width: 20px;
 }
-.third:has(input[type="radio"]),
-.second:has(input[type="radio"]),
+
 .first:has(input[type="radio"]){
   flex-direction: column;
+}
+
+.row .feature,
+.row .first{
+  background-color: #dff7f8;
+color: #36485B;
+}
+
+.hide {
+  display: none !important;
+}
+irection: column;
 }
 @media (max-width: 769px) {
   .first,.second,.third {
