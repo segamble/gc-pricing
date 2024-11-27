@@ -3,11 +3,11 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     
-    <title>Pricing | My New Hugo Site</title>
-    <meta name="description" content="Pricing">
-    <meta property="og:site_name" content="Pricing" />
+    <title>Pricing option 3 | My New Hugo Site</title>
+    <meta name="description" content="Pricing option 3">
+    <meta property="og:site_name" content="Pricing option 3" />
     <meta property="og:title" content="My New Hugo Site" />
-    <meta property="og:description" content="Pricing for Our New Favorite Client You are going to love working with gC!
+    <meta property="og:description" content="Pricing for Our New Favorite Client All deliverables are per quarter.
 " />
     <meta property="og:image" content="http://localhost:1313/" />
     <meta name="keywords"
@@ -22,7 +22,7 @@
     
     <link rel="stylesheet" href="http://localhost:1313/sass/main.min.a669fc379ca0ba4d389af69be2682407e7bca16d368f2e7ad5b83c0cd80029b3.css" type="text/css" media="screen">
 
-    <link rel="stylesheet" href="http://localhost:1313/css/style2.css">
+    <link rel="stylesheet" href="http://localhost:1313/css/style1.css">
     
     
 
@@ -85,239 +85,186 @@
 <div class="intro" style="align-items: center">
   
   <p><h2 id="pricing-for-our-new-favorite-client">Pricing for Our New Favorite Client</h2>
-<p><strong>You</strong> are going to <em>love</em> working with gC!</p>
+<p>All deliverables are <em>per quarter</em>.</p>
 </p>
 </div>
 <div class="wrapper">
-  <div class="table">
+  
+  <div class="table two-col">
     <div class="header">
       <div class="feature">
+        Personas
       </div>
       <div class="first">
-        Good
-      </div>
-      <div class="second">
-        Better
-      </div>
-      <div class="third">
-        Best
+        <input type="number" id="personas" value="2" min="1" max="3"/>
       </div>
     </div>
     <div class="container">
-      <div class="row option">
+
+      <div class="row input">
          <div class="feature">
           New Content
-White Papers/eBooks = 1 
-Exec Summaries/Solution Sheets/Case Studies = .5
-Interactive Campaigns = 1
+          <div class="tooltip">White Papers/eBooks = 1 <br>
+            Exec Summaries/Solution Sheets/Case Studies = .5<br>
+            Interactive Campaigns = 1</div>
         </div>
         <div class="first">
-          8
+          <input type="number" value="1" min="0" max="16"/>
         </div>
-        <div class="second">
-          12
-        </div>
-        <div class="third">
-          16
-        </div>
+        
       </div>
     </div>
     <div class="container">
-      <div class="row option">
+      <div class="row input">
          <div class="feature">
           Top of Funnel Campaigns
+          <div class="tooltip">Full cycle development from CTA to Assets</div>
         </div>
         <div class="first">
-          4
+          <input type="number" value="2" min="0" max="16"/>
         </div>
-        <div class="second">
-          4
-        </div>
-        <div class="third">
-          6
-        </div>
+        
       </div>
     </div>
 
     <div class="container">
-      <div class="row option">
+      <div class="row input">
          <div class="feature">
-          Lead Nurture
+          Omnichannel Lead Nurture
+          <div class="tooltip">Email <br>
+            Banner<br>
+            LinkedIn</div>
         </div>
         <div class="first">
-          Email, Banner, Linkedin
+          <div><input type="radio" id="yn1" name="ln" value="1" checked="checked"/><label for="yn1">Yes</label></div>
+          <div><input type="radio" id="nn1" name="ln" value="0"/><label for="nn1">No</label></div>
         </div>
-        <div class="second">
-          Email, Banner, Linkedin
-        </div>
-        <div class="third">
-          Email, Banner, Linkedin
-        </div>
+        
       </div>
     </div>
 
     <div class="container">
-      <div class="row option">
+      <div class="row input">
          <div class="feature">
           Re-Engagement & Marketing Ops
+          <div class="tooltip">Optimizing outreach to your existing database.</div>
         </div>
+        
         <div class="first">
-          YES
+          <div><input type="radio" id="yo1" name="mops" value="1" checked="checked"/><label for="yo1">Yes</label></div>
+          <div><input type="radio" id="no1" name="mops" value="0"/><label for="no1">No</label></div>
         </div>
-        <div class="second">
-          YES
-        </div>
-        <div class="third">
-          YES
-        </div>
+       
       </div>
     </div>
 
     <div class="container">
-      <div class="row option">
+      <div class="row input">
          <div class="feature">
           SEO-Optimized Blog Posts
+          <div class="tooltip">Making sure that organic search leads your prospects to your site.</div>
         </div>
         <div class="first">
-          8
+          <input type="number" value="3" min="0" max="16"/>
         </div>
-        <div class="second">
-          12
-        </div>
-        <div class="third">
-          16
-        </div>
+        
       </div>
     </div>
 
     <div class="container">
-      <div class="row option">
+      <div class="row input">
          <div class="feature">
-          Newsletter
+          Newsletters 
+          <div class="tooltip">A monthly newsletter for each persona</div>
         </div>
         <div class="first">
-          24
+          6
         </div>
-        <div class="second">
-          24
-        </div>
-        <div class="third">
-          24
-        </div>
+        
       </div>
     </div>
 
     <div class="container">
-      <div class="row">
+      <div class="row input">
          <div class="feature">
           CRM/Marketing Automation Integration
+          <div class="tooltip">Working with your tech stack</div>
         </div>
         <div class="first">
           YES
         </div>
-        <div class="second">
-          YES
-        </div>
-        <div class="third">
-          YES
-        </div>
+        
       </div>
     </div>
 
     <div class="container">
-      <div class="row">
+      <div class="row input">
          <div class="feature">
           Media Buy & Strategic Planning
+          <div class="tooltip">Media management and continual review of platforms and techniques</div>
         </div>
         <div class="first">
           YES
         </div>
-        <div class="second">
-          YES
-        </div>
-        <div class="third">
-          YES
-        </div>
+        
       </div>
     </div>
 
     <div class="container">
-      <div class="row">
+      <div class="row input">
          <div class="feature">
           Meetings
+          <div class="tooltip">Coordination and communication with the A team</div>
         </div>
         <div class="first">
           Weekly
         </div>
-        <div class="second">
-          Weekly
-        </div>
-        <div class="third">
-          Weekly
-        </div>
+       
       </div>
     </div>
 
     <div class="totals cost">
       <div class="feature">
-        SERVICE COST PER MONTH<br>(3 MO commitment)
+        SERVICE COST PER QUARTER
       </div>
       <div class="first">
-        $21000
+        $
       </div>
-      <div class="second">
-        $25000
-      </div>
-      <div class="third">
-        $35000
-      </div>
+      
     </div>
-
-    <div class="totals discount1">
-      <div class="feature">
-        SERVICE COST PER MONTH<br>(6 MO commitment)
-      </div>
-      <div class="first">
-        
-      </div>
-      <div class="second">
-        
-      </div>
-      <div class="third">
-        
-      </div>
     </div>
-
-    <div class="totals discount2">
-      <div class="feature">
-        SERVICE COST PER MONTH<br>(12 MO commitment)
-      </div>
-      <div class="first">
-        
-      </div>
-      <div class="second">
-        
-      </div>
-      <div class="third">
-        
-      </div>
-    </div>
-
-    </div>
-    <div class="trashbin">
-      <div class="header">
-        <div class="title">
-          Stuff I don't care about
-        </div>
+    <div class="contract-term">Length of signed contract: 
+      <div>
+      <div><input type="radio" id="three" name="term" value="1"/><label for="three">Month to month</label></div>
+      <div><input type="radio" id="six" name="term" value="0.95" checked="checked"/><label for="three">6 months</label></div>
+      <div><input type="radio" id="twelve" name="term" value="0.85"/><label for="three">12 months</label></div>
     </div>
     </div>
     </div>
+<div class="hide">
+  <span id="p1">0.8</span>
+  <span id="p2">1</span>
+  <span id="p3">1.25</span>
+  <span id="base">10000</span>
+  <span id="content1">10000</span>
+  <span id="content2">9000</span>
+  <span id="content3">8000</span>
+  <span id="campaigns1">8000</span>
+  <span id="campaigns2">6000</span>
+  <span id="campaigns3">5000</span>
+  <span id="blogs1">500</span>
+  <span id="blogs2">450</span>
+  <span id="blogs3">425</span>
+  <span id="ln">9000</span>
+  <span id="mops">9000</span>
+  <span id="news">1000</span>
+</div>
 <div class="nav">
 </div>
 
 
 
-    <script type="text/javascript" src="http://localhost:1313/js/script2.js"></script>
+    <script type="text/javascript" src="http://localhost:1313/js/inputs4.js"></script>
 
 <footer id="footer">
     <strong></strong>

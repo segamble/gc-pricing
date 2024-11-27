@@ -195,21 +195,7 @@ color: #36485B;
   display: none !important;
 }
 
-@media (max-width: 769px) {
-  .first,.second,.third {
-    writing-mode: vertical-lr;
-  }
-}
 
-@media (max-width: 769px) {
-  .totals .agency-of-record, .totals .gc, .totals .in-house, .totals .regional {
-    writing-mode: horizontal-tb;
-  }
-}
-
-.row.chosen {
-  opacity: 0.4;
-}
 .row .feature {
   background-color: #dff7f8;
   color: #000;
@@ -218,11 +204,6 @@ color: #36485B;
 .row .first, .row .second, .row .third {
   background-color: #dff7f8;
   color: #36485B;
-}
-@media (max-width: 769px) {
-  .row .first, .row .second, .row .third {
-    writing-mode: unset;
-  }
 }
 
 

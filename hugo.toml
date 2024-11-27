@@ -6,7 +6,7 @@ theme = 'gruvhugo'
   custom_js = ["js/script2.js"]
 [params.style]
   # add path to custom CSS files here
-  custom_css = ["css/style1.css"]
+  custom_css = ["css/style2.css"]
 
 
   

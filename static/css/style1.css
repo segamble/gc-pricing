@@ -31,6 +31,20 @@ body {
   width: 80%;
   margin: 0 auto;
 }
+.pricing-container{
+  display: flex;
+  justify-content: space-around;
+}
+.mediabuy-wrapper{
+  width: 30%;
+}
+.mediabuy-wrapper .table .row .feature,
+.mediabuy-wrapper .table .row .first{
+  background-color: #dfebf8;
+}
+.mediabuy-wrapper .table #media-bu input{
+  width: 100px;
+}
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -180,8 +194,7 @@ color: #36485B;
 .hide {
   display: none !important;
 }
-irection: column;
-}
+
 @media (max-width: 769px) {
   .first,.second,.third {
     writing-mode: vertical-lr;
@@ -201,13 +214,7 @@ irection: column;
   background-color: #dff7f8;
   color: #000;
 }
-/* .row .feature:before {
-  content: "\e945";
-  font-family: "Material Symbols Rounded";
-  font-size: 1.5rem;
-  opacity: 0.5;
-  margin-left: -10px;
-} */
+
 .row .first, .row .second, .row .third {
   background-color: #dff7f8;
   color: #36485B;
@@ -217,188 +224,10 @@ irection: column;
     writing-mode: unset;
   }
 }
-.trashbin {
-  width: 1022px;
-  max-width: 100%;
-  margin: 10px auto 0;
-}
-.trashbin .header {
-  background-color: #bd692c;
-  color: #fff;
-  padding: 2%;
-  pointer-events: none;
-}
-.trashbin .row {
-  filter: grayscale(1);
-}
-.trashbin .row .weight {
-  background-color: #dff7f8;
-  color: #dff7f8;
-}
 
-.drop-container {
-  background-color: #eeeeee;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.25), transparent);
-  box-shadow: inset 4px 4px rgba(0, 0, 0, 0.25);
-  min-height: 2px;
-}
-.drop-container.drag-over {
-  border: dashed 3px #77b5bb;
-  background-color: #dff7f8;
-  min-height: 38px;
-}
 
-.bracket {
-  position: absolute;
-  display: flex;
-  left: -200px;
-  height: auto;
-  align-items: center;
-  width: 700px;
-  z-index: -1;
-}
-.bracket h3 {
-  writing-mode: sideways-lr;
-  color: #8884BA;
-  font-size: 1.5rem;
-}
-.bracket svg {
-  min-width: 20px;
-}
 
-.walkthru ul {
-  padding: 0;
-}
-.walkthru li {
-  display: none;
-  background-color: #E48D51;
-  color: #06182C;
-  padding: 24px 32px;
-  border-radius: 12px;
-  max-width: 408px;
-  position: absolute;
-  left: calc(36% - 20px);
-  top: 80px;
-  z-index: 1000;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
-}
-.walkthru li span {
-  display: block;
-  font-size: 1.2rem;
-  margin-bottom: 2px;
-}
-.walkthru li.showing {
-  display: block;
-}
-.walkthru li.showing::before {
-  content: "\e86b";
-  font-family: "Material Symbols Rounded";
-  font-size: 20px;
-  color: #E48D51;
-  position: absolute;
-  right: 99%;
-  top: 48px;
-  transform: rotate(270deg);
-}
-.walkthru li:nth-of-type(2), .walkthru li:nth-of-type(3) {
-  left: 40%;
-  top: 190px;
-}
-.walkthru li:nth-of-type(2).showing::before, .walkthru li:nth-of-type(3).showing::before {
-  left: 20%;
-  top: -19px;
-  transform: none;
-}
-.walkthru li:nth-of-type(3) {
-  left: 0;
-  top: auto;
-  bottom: 50px;
-}
-.walkthru li:nth-of-type(3).showing::before {
-  left: 20%;
-  top: 97%;
-  transform: rotate(180deg);
-}
 
-.launch, footer button {
-  background-color: #E17F3D;
-  border-radius: 350.393px;
-  box-shadow: 4.258px 4.258px 10.645px 0px rgba(54, 72, 91, 0.2);
-  display: none;
-  padding: 12px 30px;
-  border: none;
-  margin: 40px auto 30px;
-  font-weight: bold;
-  font-size: 1.1rem;
-}
-.launch:hover, footer button:hover {
-  background-color: #9f4f19;
-  color: #fff;
-  box-shadow: none;
-  cursor: pointer;
-}
-
-footer button {
-  display: inline-block;
-}
-
-.ttclose {
-  text-align: right;
-}
-.ttclose:hover {
-  color: #fff;
-  cursor: pointer;
-}
-
-.next {
-  margin: 13px 0 0 80%;
-  border: 2px solid #06182C;
-  padding: 10px 20px;
-  border-radius: 30px;
-  background-color: #E17F3D;
-  font-weight: bold;
-}
-.next:hover {
-  background-color: #06182C;
-  color: #fff;
-}
-
-footer {
-  margin: -200px 0 0 0;
-}
-footer .transition {
-  background-image: url(footer.svg);
-  background-position: top center;
-  background-repeat: no-repeat;
-  height: 251px;
-}
-footer .page-container {
-  max-width: 1440px;
-  text-align: center;
-  background-color: rgba(75, 171, 158, 0.3);
-  padding: 0 0 10%;
-  overflow: hidden;
-}
-footer .page-container h2 {
-  -webkit-text-stroke-width: 1.6773899794;
-  -webkit-text-stroke-color: var(--Background-1, #36485B);
-  font-family: "Gilmer Outline";
-  font-size: 48px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 99%;
-  /* 47.52px */
-}
-footer .page-container button {
-  margin: 0;
-}
-
-dotlottie-player {
-  position: absolute;
-  width: 100px !important;
-  top: 10px;
-  left: 25%;
-}
 
 .hide {
   display: none !important;
