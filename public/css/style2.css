@@ -35,16 +35,12 @@ body {
   display: flex;
   justify-content: space-around;
 }
-.mediabuy-wrapper{
-  width: 30%;
+@media(max-width: 885px){
+  .pricing-container{
+    flex-direction: column;
+  }
 }
-.mediabuy-wrapper .table .row .feature,
-.mediabuy-wrapper .table .row .first{
-  background-color: #dfebf8;
-}
-.mediabuy-wrapper .table #media-bu input{
-  width: 100px;
-}
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -55,6 +51,9 @@ body {
   .wrapper {
     min-height: 800px;
   }
+}
+.two-col .feature.across{
+  width: 100%;
 }
 .contract-term{
   text-align: center;
@@ -127,7 +126,9 @@ input{
   font-size: 1rem;
   border: 1px solid #36485B;
 }
-
+.large input{
+  width: 100px;
+}
 .header {
   flex-grow: 0;
 }
@@ -174,9 +175,7 @@ input{
   background-color: #36485B;
   color: #fff;
 }
-.row.input .first{
-  pointer-events:auto;
-}
+
 .row input[type="radio"]{
   width: 20px;
 }

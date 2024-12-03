@@ -167,12 +167,10 @@
     <div class="wrapper">
       <div class="table two-col">
         <div class="header">
-          <div class="feature">
-            
+          <div class="feature across">
+            Quarterly Spend and Results
           </div>
-          <div class="first">
-            
-          </div>
+
         </div>
         <div class="row input">
              <div class="feature">
@@ -188,8 +186,8 @@
               Media Buy
               <div class="tooltip">glassCanopy does not markup media buy.  This is what you spend directly with advertising platforms.</div>
             </div>
-            <div class="first">
-              $<input type="number" value="{{ .Params.mediaSpend }}" min="10000" max="100000"/>
+            <div class="first large">
+              $<input type="number" value="{{ .Params.mediaSpend }}" min="10000" max="100000" step="5000"/>
             </div>
           </div>
          <div class="row input">
@@ -213,15 +211,13 @@
           </div>
           
           <div class="totals cost">
-            <div class="feature">
+            <div class="feature across">
               EXPECTED RESULTS
             </div>
-            <div class="first">
-              &nbsp;
-            </div>
+  
             
           </div>
-          <div class="totals cost">
+          <div class="mqls totals cost">
             <div class="feature">
               MQLs
             </div>
@@ -230,7 +226,7 @@
             </div>
             
           </div>
-          <div class="totals cost">
+          <div class="engs totals cost">
             <div class="feature">
               Engagements
             </div>
@@ -272,7 +268,7 @@
   
 </div>
 {{ partial "menu.html" . }}
-{{ $custom_js := "js/allin.js"}}
+{{ $custom_js := "js/allin2.js"}}
 
     <script type="text/javascript" src="{{ $custom_js | absURL }}"></script>
 

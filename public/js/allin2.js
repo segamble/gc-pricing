@@ -79,7 +79,6 @@ function calculateAll(){
 
 function calcQuart(amt){
     qCost = parseInt(amt)
-    console.log(qCost)
     qCost += parseInt(document.querySelector('#media-bu input').value)
     number = parseInt(document.querySelector('#bdr-boos input').value)
     if(number > 2){
@@ -91,4 +90,10 @@ function calcQuart(amt){
     }
     qCost += addCost
     document.getElementById('qcost').innerHTML = "$"+qCost.toLocaleString()
+    calcResults()
+}
+function calcResults(){
+    media = parseInt(document.querySelector('#media-bu input').value)
+    document.querySelector('.mqls .first').innerHTML = Math.round(media/175)
+    document.querySelector('.engs .first').innerHTML = Math.round((media/175)*1.5)
 }
