@@ -39,10 +39,8 @@ function calculateNewsletters(personas){
 function calculateCost(){
   term = document.querySelector('input[name=term]:checked').value
   personas = document.getElementById('personas').value
-  console.log(personas)
   pmid = 'p'+personas
   pm = document.getElementById(pmid).innerHTML
-  console.log(pm)
   amt = base
   for(i=0; i<6; ++i){
     str="first"
@@ -96,4 +94,17 @@ function calcQuart(amt){
 }
 function calcResults(){
     console.log(mqlcalc)
+    mqls = 0
+    mqls += mqlcalc['spend']*parseInt(document.querySelector('#media-bu input').value)
+    console.log(mqls)
+    mqls += mqlcalc['bdr']*parseInt(document.querySelector('bdr-boos input').value)
+    console.log(mqls)
+    mqls += (1+mqlcalc['content'])*mqls
+    console.log(mqls)
+    mqls += (1+mqlcalc['campaigns'])*mqls
+    console.log(mqls)
+    mqls += (mqlcalc['personas']*(parseInt(document.getElementById('personas').value)-1))*mqls
+    console.log(mqls)
+    mqls += (mqlcalc['blogpost']*parseInt(document.querySelector('bdr-boos input').value))+mqls
+    console.log(mqls)
 }

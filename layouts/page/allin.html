@@ -209,8 +209,10 @@
               &nbsp;
             </div>
           </div>
-          
-          <div class="totals cost">
+          </div>
+
+         <div class="table two-col">
+        <div class="header">
             <div class="feature across">
               EXPECTED RESULTS
             </div>
@@ -259,16 +261,24 @@
   <span id="ln">{{ .Params.leadNurture }}</span>
   <span id="mops">{{ .Params.marketingOps }}</span>
   <span id="news">{{ .Params.newsletters }}</span>
-  <span id="media"></span>
-  <span id="mql">{{ .Params.MQLMultiplier }}</span>
-  <span id="eng">{{ .Params.EngMultiplier }}</span>
   <span id="bdr1">{{ .Params.bdr.first }}</span>
   <span id="bdr2">{{ .Params.bdr.second }}</span>
   <span id="bdr3">{{ .Params.bdr.third }}</span>
   
+  <span id="mqlsp">{{ .Params.mql.spend }}</span>
+  <span id="mqlbdr">{{ .Params.mql.bdr }}</span>
+  <span id="mqlco">{{ .Params.mql.content }}</span>
+  <span id="mqlca">{{ .Params.mql.campaigns }}</span>
+  <span id="mqlp">{{ .Params.mql.personas }}</span>
+  <span id="mqlb">{{ .Params.mql.blogpost }}</span>
+  <span id="engs">{{ .Params.eng.spend }}</span>
+  <span id="engbdr">{{ .Params.eng.bdr }}</span>
+  <span id="engl">{{ .Params.eng.leadNurture }}</span>
+  <span id="engm">{{ .Params.eng.marketingOps }}</span>
+  <span id="engp">{{ .Params.eng.personas }}</span>
 </div>
 {{ partial "menu.html" . }}
-{{ $custom_js := "js/allin2.js"}}
+{{ $custom_js := "js/allin5.js"}}
 
     <script type="text/javascript" src="{{ $custom_js | absURL }}"></script>
 

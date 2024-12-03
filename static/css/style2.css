@@ -34,6 +34,7 @@ body {
 .pricing-container{
   display: flex;
   justify-content: space-around;
+  align-items: flex-start;
 }
 @media(max-width: 885px){
   .pricing-container{
@@ -44,20 +45,15 @@ body {
 .wrapper {
   display: flex;
   flex-direction: column;
-  min-height: 900px;
   max-height: 100vh;
 }
-@media (max-height: 720px) {
-  .wrapper {
-    min-height: 800px;
-  }
-}
+
 .two-col .feature.across{
   width: 100%;
 }
 .contract-term{
   text-align: center;
-  margin: 40px 0;
+  margin: 0;
   padding: 2%;
 }
 .contract-term>div{
@@ -200,14 +196,20 @@ color: #36485B;
   color: #000;
 }
 
-.row .first, .row .second, .row .third {
+.row .first {
   background-color: #dff7f8;
   color: #36485B;
 }
 
-
-
-
+.table{
+  width: 100%;
+  margin-bottom: 40px;
+}
+.table:nth-of-type(2) .header{
+  border-bottom: 2px solid #fff;
+  font-size: 1.3rem;
+  height: 2rem;
+}
 
 .hide {
   display: none !important;

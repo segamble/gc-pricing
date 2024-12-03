@@ -7,6 +7,8 @@ const mops = parseInt(document.getElementById('mops').innerHTML)
 const news = parseInt(document.getElementById('news').innerHTML)
 const bdr = [parseInt(document.getElementById('bdr1').innerHTML),parseInt(document.getElementById('bdr2').innerHTML),parseInt(document.getElementById('bdr3').innerHTML)]
 const items = document.querySelectorAll('.row.input');
+const mqlcalc = {spend:parseFloat(document.getElementById('mqlsp').innerHTML),bdr:parseFloat(document.getElementById('mqlbdr').innerHTML),content:parseFloat(document.getElementById('mqlco').innerHTML),campaigns:parseFloat(document.getElementById('mqlca').innerHTML), personas:parseFloat(document.getElementById('mqlp').innerHTML), blogpost:parseFloat(document.getElementById('mqlb').innerHTML)}
+const engcalc = {spend:parseFloat(document.getElementById('engs').innerHTML),bdr:parseFloat(document.getElementById('engbdr').innerHTML),nurture:parseFloat(document.getElementById('engl').innerHTML),mops:parseFloat(document.getElementById('engm').innerHTML), personas:parseFloat(document.getElementById('engp').innerHTML)}
 
 items.forEach(item => {
     item.id = item.firstElementChild.innerHTML.trim().replaceAll(' ', '-').toLowerCase().slice(0,8)
@@ -37,10 +39,8 @@ function calculateNewsletters(personas){
 function calculateCost(){
   term = document.querySelector('input[name=term]:checked').value
   personas = document.getElementById('personas').value
-  console.log(personas)
   pmid = 'p'+personas
   pm = document.getElementById(pmid).innerHTML
-  console.log(pm)
   amt = base
   for(i=0; i<6; ++i){
     str="first"
@@ -93,7 +93,19 @@ function calcQuart(amt){
     calcResults()
 }
 function calcResults(){
-    media = parseInt(document.querySelector('#media-bu input').value)
-    document.querySelector('.mqls .first').innerHTML = Math.round(media/175)
-    document.querySelector('.engs .first').innerHTML = Math.round((media/175)*1.5)
+    console.log(mqlcalc)
+    mqls = 0
+    mqls += mqlcalc['spend']*parseInt(document.querySelector('#media-bu input').value)
+    console.log(mqls)
+    mqls += mqlcalc['bdr']*parseInt(document.querySelector('#bdr-boos input').value)
+    console.log(mqls)
+    mqls *= (1+mqlcalc['content'])
+    console.log(mqls)
+    mqls *= (1+mqlcalc['campaigns'])
+    console.log(mqls)
+    mqls *= (mqlcalc['personas']*(parseInt(document.getElementById('personas').value)-1))
+    console.log(mqls)
+    mqls += (mqlcalc['blogpost']*parseInt(document.querySelector('#seo-opti input').value))+mqls
+    console.log(mqls)
+    document.querySelector('.mqls .first').innerHTML = Math.round(mqls)
 }
