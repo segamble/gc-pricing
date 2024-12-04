@@ -66,6 +66,7 @@ function calculateCost(){
   amt *=pm
     amt= Math.round(amt)
     calcQuart(amt)
+    calcResults()
     moAmt = Math.round(amt/3).toLocaleString()
   document.querySelector('.totals.cost .'+str).innerText = "$"+amt.toLocaleString() +"\n($"+ moAmt +" per month)"
   document.querySelector('#services .first').innerHTML = "$"+amt.toLocaleString()
@@ -90,9 +91,9 @@ function calcQuart(amt){
     }
     qCost += addCost
     document.getElementById('qcost').innerHTML = "$"+qCost.toLocaleString()
-    calcResults()
 }
 function calcResults(){
+    console.log('calculating')
     mqls = 0
     mqls += mqlcalc['spend']*parseInt(document.querySelector('#media-bu input').value)
     mqls += mqlcalc['bdr']*parseInt(document.querySelector('#bdr-boos input').value)

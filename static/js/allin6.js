@@ -93,6 +93,7 @@ function calcQuart(amt){
     document.getElementById('qcost').innerHTML = "$"+qCost.toLocaleString()
 }
 function calcResults(){
+    console.log('calculating')
     mqls = 0
     mqls += mqlcalc['spend']*parseInt(document.querySelector('#media-bu input').value)
     mqls += mqlcalc['bdr']*parseInt(document.querySelector('#bdr-boos input').value)
