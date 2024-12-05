@@ -93,20 +93,26 @@ function calcQuart(amt){
     document.getElementById('qcost').innerHTML = "$"+qCost.toLocaleString()
 }
 function calcResults(){
-    console.log('calculating')
     mqls = 0
+    contentNo = parseInt(document.querySelector('#new-cont input').value)
+    campaignNo = parseInt(document.querySelector('#top-of-f input').value)
     mqls += mqlcalc['spend']*parseInt(document.querySelector('#media-bu input').value)
     mqls += mqlcalc['bdr']*parseInt(document.querySelector('#bdr-boos input').value)
-    mqls *= (1+mqlcalc['content'])
-    mqls *= (1+mqlcalc['campaigns'])
+    mqls *= (1+(mqlcalc['content']*contentNo))
+    mqls *= (1+(mqlcalc['campaigns']*campaignNo))
     mqls *= 1+(mqlcalc['personas']*(parseInt(document.getElementById('personas').value)-1))
     mqls += (mqlcalc['blogpost']*parseInt(document.querySelector('#seo-opti input').value))
     document.querySelector('.mqls .first').innerHTML = Math.round(mqls)
     engs = 0
     engs += engcalc['spend']*parseInt(document.querySelector('#media-bu input').value)
     engs += engcalc['bdr']*parseInt(document.querySelector('#bdr-boos input').value)
-    engs += (engcalc['nurture'])*document.querySelector('input[name="ln"]:checked').value 
-    engs += (engcalc['mops'])*document.querySelector('input[name="mops"]:checked').value 
+    engs *= (1+(mqlcalc['content']*contentNo))
+    engs *= (1+(mqlcalc['campaigns']*campaignNo))
+    engs += engs*(engcalc['nurture'])*parseInt(document.querySelector('input[name="ln"]:checked').value) 
+    engs += engs*(engcalc['mops'])*parseInt(document.querySelector('input[name="mops"]:checked').value) 
     engs *= 1+(engcalc['personas']*(parseInt(document.getElementById('personas').value)-1))
     document.querySelector('.engs .first').innerHTML = Math.round(engs)
+    qcost = parseInt(document.getElementById('qcost').innerHTML.slice(1,).replace(/,/g, ''))
+    document.querySelector('.each .first').innerHTML = '$' +((qcost/mqls).toFixed(2).toLocaleString())
+    document.querySelector('.engs.each .first').innerHTML = '$' +((qcost/engs).toFixed(2).toLocaleString())
 }

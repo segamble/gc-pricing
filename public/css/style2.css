@@ -205,7 +205,8 @@ color: #36485B;
   width: 100%;
   margin-bottom: 40px;
 }
-.table:nth-of-type(2) .header{
+.table:nth-of-type(2) .header,
+.table:nth-of-type(3) .header{
   border-bottom: 2px solid #fff;
   font-size: 1.3rem;
   height: 2rem;
